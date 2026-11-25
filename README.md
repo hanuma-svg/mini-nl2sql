@@ -1,17 +1,12 @@
 # mini-nl2sql
 
-Converts English questions into SQL using rule-based parsing and a 
-sqlglot AST builder with a 100-run determinism test — no LLM in the 
-calculation path.
+Converts English questions into SQL using rule-based parsing and a sqlglot AST builder with a 100-run determinism test — no LLM in the calculation path.
+
+**Live demo:** [https://mini-nl2sql.streamlit.app/](https://mini-nl2sql.streamlit.app/)
 
 ## Why I built it
 
-I built this because LLM-based NL-to-SQL tools fail silently: they 
-produce queries that look plausible but return incorrect numbers for 
-business decisions. This is a 1% scale model demonstrating the 
-deterministic approach used by query engines like Trinetro Labs' TRE, 
-separating strict intent parsing from AST-driven SQL generation with 
-an audit trail.
+I built this because LLM-based NL-to-SQL tools fail silently: they produce queries that look plausible but return incorrect numbers for business decisions. This is a 1% scale model demonstrating the deterministic approach used by query engines like Trinetro Labs' TRE, separating strict intent parsing from AST-driven SQL generation with an audit trail.
 
 ## How to run it
 
@@ -21,9 +16,6 @@ streamlit run app.py
 python main.py "How many orders did customer 5 place?"
 pytest -v
 ```
-
-
----
 
 ## What it does
 
